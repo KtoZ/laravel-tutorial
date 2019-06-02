@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// todo 01: ルーティング定義を追加
