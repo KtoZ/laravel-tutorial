@@ -18,6 +18,6 @@ cd src
 プロジェクトの環境設定ファイルを作成します。
 
 ```shell
-cp .env.example .env
+cp .env.example .env # For windows: copy .env.example .env
 php artisan key:generate
 ```

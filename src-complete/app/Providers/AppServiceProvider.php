@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // todo 02: AppServiceProvider にバインドを追加
+        $this->app->bind(
+            \app\Services\PhotoServiceInterface::class,
+            \app\Services\PhotoService::class
+        );
     }
 }
