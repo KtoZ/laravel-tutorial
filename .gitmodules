@@ -1,0 +1,30 @@
+[submodule "book/chapter01"]
+	path = book/chapter01
+	url = https://github.com/laravel-socym/chapter01.git
+[submodule "book/chapter02"]
+	path = book/chapter02
+	url = https://github.com/laravel-socym/chapter02.git
+[submodule "book/chapter03"]
+	path = book/chapter03
+	url = https://github.com/laravel-socym/chapter03.git
+[submodule "book/chapter04-2"]
+	path = book/chapter04-2
+	url = https://github.com/laravel-socym/chapter04-2.git
+[submodule "book/chapter05"]
+	path = book/chapter05
+	url = https://github.com/laravel-socym/chapter05.git
+[submodule "book/chapter06"]
+	path = book/chapter06
+	url = https://github.com/laravel-socym/chapter06.git
+[submodule "book/chapter07"]
+	path = book/chapter07
+	url = https://github.com/laravel-socym/chapter07.git
+[submodule "book/chapter08"]
+	path = book/chapter08
+	url = https://github.com/laravel-socym/chapter08.git
+[submodule "book/chapter09"]
+	path = book/chapter09
+	url = https://github.com/laravel-socym/chapter09.git
+[submodule "book/chapter10"]
+	path = book/chapter10
+	url = https://github.com/laravel-socym/chapter10.git
