@@ -21,3 +21,17 @@ cd src
 cp .env.example .env # For windows: copy .env.example .env
 php artisan key:generate
 ```
+
+## Command List
+
+Composer Create-Project
+
+```shell
+composer create-project --prefer-dist laravel/laravel . "5.5.*"
+```
+
+Run local server
+
+```shell
+php artisan serve
+```
