@@ -3,35 +3,20 @@
 [PHP フレームワーク Laravel Web アプリケーション開発バージョン 5.5 LTS 対応](https://www.socym.co.jp/book/1184) と
 [Laravel Document](https://readouble.com/laravel/) をまとめた Laravel のチュートリアルです。
 
-## Tutorial
-
-docs ディレクトリを進めていくことで Laravel を体験的に学べます。 src ディレクトリの中身をコーディングしていき、最終的に src-complate ディレクトリの内容が完成するようになっています。
+docs ディレクトリを進めていくことで Laravel を体験的に学べます。新しい Laravel プロジェクトを作成したあとに、 src ディレクトリに記載してある TODO コメントを参考にコーディングしていきます。
 
 ## Prerequisites
 
-コマンドは全て src で実行します。
+- xampp (7.3.6) がインストールされていること (7.3.6 ではなくても極端に新しかったり古くなければ大丈夫だと思います。)
+- Composer がインストールされていること
 
-```shell
-cd src
-```
+## Tutorial
 
-プロジェクトの環境設定ファイルを作成します。
-
-```shell
-cp .env.example .env # For windows: copy .env.example .env
-php artisan key:generate
-```
-
-## Command List
-
-Composer Create-Project
+1. 新規 Laravel プロジェクトを作成します。
 
 ```shell
 composer create-project --prefer-dist laravel/laravel . "5.5.*"
 ```
 
-Run local server
-
-```shell
-php artisan serve
-```
+x. DB の環境設定
+x. ide-helper
