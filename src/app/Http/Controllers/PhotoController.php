@@ -2,18 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\PhotoServiceInterface;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
 {
     // todo 02: コントローラーの Constructor に DI を追加
-    protected $service;
-
-    public function __construct(PhotoServiceInterface $service)
-    {
-        $this->service = $service;
-    }
 
     /**
      * Display a listing of the resource.
@@ -23,7 +16,6 @@ class PhotoController extends Controller
     public function index()
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.index');
     }
 
     /**
@@ -34,7 +26,6 @@ class PhotoController extends Controller
     public function create()
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.create');
     }
 
     /**
@@ -44,10 +35,9 @@ class PhotoController extends Controller
      * @return \Illuminate\Http\Response
      */
     // todo 04: コントローラーにフォームリクエストを設定
-    public function store(StorePhotoPost $request)
+    public function store(Request $request)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.store');
     }
 
     /**
@@ -59,7 +49,6 @@ class PhotoController extends Controller
     public function show($id)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.show');
     }
 
     /**
@@ -71,7 +60,6 @@ class PhotoController extends Controller
     public function edit($id)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.edit');
     }
 
     /**
@@ -84,7 +72,6 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.update');
     }
 
     /**
@@ -96,6 +83,5 @@ class PhotoController extends Controller
     public function destroy($id)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.destroy');
     }
 }
