@@ -25,7 +25,7 @@ class PhotoService implements PhotoServiceInterface
         $photo->body = $body;
         $photo->save();
 
-        return view('article.store');
+        return $photo;
     }
 
     public function update($id, $title, $body)
@@ -34,6 +34,8 @@ class PhotoService implements PhotoServiceInterface
         $photo->title = $title;
         $photo->body = $body;
         $photo->save();
+
+        return $photo;
     }
 
     public function delete($id)
