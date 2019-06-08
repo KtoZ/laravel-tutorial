@@ -26,3 +26,7 @@ composer create-project --prefer-dist laravel/laravel . "5.5.*"
 
 x. DB の環境設定
 x. ide-helper
+x. ide-helper model
+
+php artisan ide-helper:generate
+php artisan ide-helper:models --write
