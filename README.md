@@ -24,9 +24,22 @@ docs ディレクトリを進めていくことで Laravel を体験的に学べ
 composer create-project --prefer-dist laravel/laravel . "5.5.*"
 ```
 
-x. DB の環境設定
-x. ide-helper
-x. ide-helper model
+2. Laravel IDE Helper を追加します。
+
+```shell
+composer require --dev barryvdh/laravel-ide-helper
+composer require --dev doctrine/dbal
 
 php artisan ide-helper:generate
-php artisan ide-helper:models --write
+```
+
+3. AppServiceProvider を開いて boot を書き換えます。
+
+```php
+public function boot()
+{
+    \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+}
+```
+
+x. docs を進めていきます。
