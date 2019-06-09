@@ -26,7 +26,7 @@ class PhotoPost extends FormRequest
     {
         // todo 04: フォームリクエストの validation を実装
         return [
-            'title' => 'required|unique:posts|max:20',
+            'title' => 'required|max:20',
             'body' => 'required',
         ];
     }

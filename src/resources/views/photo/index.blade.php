@@ -7,7 +7,7 @@
     <h1>一覧</h1>
 
     <div class="row">
-        <a href="/create" class="btn btn-primary">新規登録</a>
+        <a href="/photo/create" class="btn btn-primary">新規登録</a>
     </div>
 
     <div class="row">
@@ -19,7 +19,7 @@
                     <p>{{ $photo->body }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/show/{{ $photo->id }}">詳細</a>
+                    <a href="/photo/{{ $photo->id }}">詳細</a>
                 </div>
             </div>
         </div>

@@ -7,14 +7,27 @@
     <h1>詳細</h1>
 
     <div class="input-field">
-        <input id="title" type="text" class="validate" name="title" value="{{ $photo->title }}" readonly>
+        <input id="title" type="text" name="title" value="{{ $photo->title }}" readonly>
         <label for="title">タイトル</label>
     </div>
     <div class="input-field">
-        <textarea id="body" type="text" class="materialize-textarea" name="body" value="{{ $photo->body }}" readonly></textarea>
+        <textarea id="body" type="text" class="materialize-textarea" name="body"readonly>{{ $photo->body }}</textarea>
         <label for="body">本文</label>
     </div>
+    <div class="input-field">
+        <input id="created-at" type="text" value="{{ $photo->created_at }}" readonly>
+        <label for="created-at">作成日時</label>
+    </div>
+    <div class="input-field">
+        <input id="updated-at" type="text" value="{{ $photo->updated_at }}" readonly>
+        <label for="updated-at">作成日時</label>
+    </div>
 
-    <a href="/edit/{{ $photo->id }}" class="waves-effect waves-light btn">修正</a>
-    <a href="/delete/{{ $photo->id }}" class="waves-effect waves-light btn">削除</a>
+    <a href="/photo/{{ $photo->id }}/edit" class="waves-effect waves-light btn">修正</a>
+
+    <form method="post" action="/photo/{{ $photo->id }}">
+        {{ csrf_field() }}
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="waves-effect waves-light btn">削除</button>
+    </form>
 @endsection

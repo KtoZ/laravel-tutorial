@@ -6,6 +6,6 @@
 @section('content')
     <h1>更新完了</h1>
 
-    <a href="/" class="waves-effect waves-light btn">一覧に戻る</a>
+    <a href="/photo/" class="waves-effect waves-light btn">一覧に戻る</a>
 
 @endsection

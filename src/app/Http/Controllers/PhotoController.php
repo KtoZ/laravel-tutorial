@@ -117,10 +117,10 @@ class PhotoController extends Controller
     public function destroy($id)
     {
         // todo 04: コントローラーのメソッドに View レスポンスを実装
-        return view('photo.destroy');
+//        return view('photo.destroy');
 
         // todo 06: View - Controller - Service の結合
-        $photo = $this->service->delete($id);
-        return view('photo.destroy');
+        $this->service->delete($id);
+        return view('photo.delete');
     }
 }

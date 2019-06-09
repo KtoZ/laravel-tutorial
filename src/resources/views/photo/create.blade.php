@@ -6,7 +6,17 @@
 @section('content')
     <h1>新規登録</h1>
 
-    <form method="post" action="/create">
+    @if ($errors->any())
+        <div class="row">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="red-text">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form method="post" action="/photo">
         {{ csrf_field() }}
         <div class="input-field">
             <input id="title" type="text" class="validate" name="title">

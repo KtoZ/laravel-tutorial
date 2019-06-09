@@ -6,14 +6,25 @@
 @section('content')
     <h1>更新</h1>
 
-    <form method="post" action="/update/{{ $photo->id }}">
+    @if ($errors->any())
+        <div class="row">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="red-text">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form method="post" action="/photo/{{ $photo->id }}">
         {{ csrf_field() }}
+        <input type="hidden" name="_method" value="PUT">
         <div class="input-field">
             <input id="title" type="text" class="validate" name="title" value="{{ $photo->title }}">
             <label for="title">タイトル</label>
         </div>
         <div class="input-field">
-            <textarea id="body" type="text" class="materialize-textarea" name="body" value="{{ $photo->body }}"></textarea>
+            <textarea id="body" type="text" class="materialize-textarea" name="body">{{ $photo->body }}</textarea>
             <label for="body">本文</label>
         </div>
 

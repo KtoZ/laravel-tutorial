@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Services\PhotoService;
+use App\Services\PhotoServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,8 +27,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // todo 02: AppServiceProvider にバインドを追加
         $this->app->bind(
-            \app\Services\PhotoServiceInterface::class,
-            \app\Services\PhotoService::class
+            PhotoServiceInterface::class,
+            PhotoService::class
         );
     }
 }
