@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePhotoPost extends FormRequest
+class PhotoPost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -37,7 +37,7 @@ class StorePhotoPost extends FormRequest
         return [
             'title.required' => 'タイトルは必須項目です。',
             'title.max' => 'タイトルは 20 文字以内で入力してください。',
-            'body.required'  => '本文は必須項目です。',
+            'body.required' => '本文は必須項目です。',
         ];
     }
 }

@@ -29,4 +29,4 @@ Route::post('/auth/login', 'Auth\LoginController@login');
 Route::get('/auth/logout', 'Auth\LoginController@logout');
 
 // todo 02: CRUD 用のリソースルーティング定義を追加
-Route::resource('photos', 'PhotoController');
+Route::resource('photo', 'PhotoController');
