@@ -27,5 +27,7 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <!-- todo 07: phpunit.xml にテスト用のデータベースを設定 -->
+        <env name="DB_DATABASE" value="app_test"/>
     </php>
 </phpunit>

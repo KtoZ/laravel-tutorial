@@ -43,3 +43,29 @@ public function boot()
 ```
 
 x. docs を進めていきます。
+
+## Note
+
+### 完成版のコードを動かす場合の手順
+
+1. src に移動
+
+```shell
+cd src
+```
+
+2. env とキーを作成
+
+```shell
+cp .env.example .env # use windows: copy command
+php artisan key:generate
+```
+
+3. env の設定 (DB など)
+
+4. マイグレーションを実行
+
+```shell
+php artisan migrate
+php artisan db:seed
+```
