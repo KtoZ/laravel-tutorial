@@ -23,11 +23,10 @@
         <label for="updated-at">作成日時</label>
     </div>
 
-    <a href="/photo/{{ $photo->id }}/edit" class="waves-effect waves-light btn">修正</a>
-
     <form method="post" action="/photo/{{ $photo->id }}">
         {{ csrf_field() }}
         <input type="hidden" name="_method" value="DELETE">
+        <a href="/photo/{{ $photo->id }}/edit" class="waves-effect waves-light btn">修正</a>
         <button type="submit" class="waves-effect waves-light btn">削除</button>
     </form>
 @endsection
