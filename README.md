@@ -18,13 +18,15 @@ docs ディレクトリを進めていくことで Laravel を体験的に学べ
 
 ## Tutorial
 
-1. 新規 Laravel プロジェクトを作成します。
+新規 Laravel プロジェクトを作成します。 `cd {NEW_PROJECT}` の代わりに、作成したプロジェクトを PHP Storm で開き、 Terminal で作業することも可能です。
 
 ```shell
-composer create-project --prefer-dist laravel/laravel . "5.5.*"
+# {NEW_PROJECT} は好きなプロジェクトの名前に書き換えてください。
+composer create-project --prefer-dist laravel/laravel {NEW_PROJECT} "5.5.*"
+cd {NEW_PROJECT}
 ```
 
-2. Laravel IDE Helper を追加します。
+Laravel IDE Helper を追加します。
 
 ```shell
 composer require --dev barryvdh/laravel-ide-helper
@@ -33,7 +35,7 @@ composer require --dev doctrine/dbal
 php artisan ide-helper:generate
 ```
 
-3. AppServiceProvider を開いて boot を書き換えます。
+AppServiceProvider を開いて boot に処理を記載します。
 
 ```php
 public function boot()
@@ -42,28 +44,22 @@ public function boot()
 }
 ```
 
-x. docs を進めていきます。
+docs を開いて進めていきます。
 
 ## Note
 
 ### 完成版のコードを動かす場合の手順
 
-1. src に移動
-
 ```shell
 cd src
 ```
 
-2. env とキーを作成
-
 ```shell
 cp .env.example .env # use windows: copy command
+# Please set env. (Database etc...)
+
 php artisan key:generate
 ```
-
-3. env の設定 (DB など)
-
-4. マイグレーションを実行
 
 ```shell
 php artisan migrate
