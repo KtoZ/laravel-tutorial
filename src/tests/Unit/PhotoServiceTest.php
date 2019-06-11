@@ -11,6 +11,7 @@ use Tests\TestCase;
 class PhotoServiceTest extends TestCase
 {
     // todo: 一度に動かすとエラーになる
+    // todo: Breakpoint で止まらない = Debug できない
     use RefreshDatabase;
 
     /**
