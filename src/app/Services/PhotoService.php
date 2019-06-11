@@ -40,6 +40,9 @@ class PhotoService implements PhotoServiceInterface
 
     public function delete($id)
     {
+        // todo 08: ログを実装
+        \Log::info("Call delete id: {$id}");
+
         return Photo::destroy($id);
     }
 }
